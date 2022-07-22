@@ -1,0 +1,73 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base{
+    .button{
+        @apply px-4 py-3 text-xl rounded-lg font-semibold focus:outline-none   
+    }
+    .button-primary{
+        @apply disabled:bg-soft-purple-disabled bg-soft-purple hover:bg-soft-purple-hover text-white transition-all duration-300
+    }
+    .button-outline-primary{
+        @apply disabled:bg-soft-purple-disabled border-soft-purple border-2 hover:bg-soft-purple-outline-hover  text-soft-purple transition-all duration-300
+    }
+    .form{
+        @apply p-4 w-96 placeholder:text-lg mx-auto rounded-lg   hover:ring-4 hover:placeholder:opacity-0 hover:ring-[#e6daff] hover:outline-0  transition-all duration-300 block 
+        border focus:outline-0 focus:border-soft-purple focus:ring-[#d3bfff] focus:ring-4 border-[#666666]
+    }
+    .form-add-invoice{
+        @apply h-12 placeholder:text-base rounded-lg  hover:ring-4 hover:placeholder:opacity-0 hover:ring-[#e6daff] transition-all duration-300 block 
+        border focus:outline-0 focus:border-soft-purple focus:ring-[#d3bfff] focus:ring-4  border-[#666666]
+    }
+    .form-generate-add-invoice{
+        @apply h-12 flex items-center px-2 placeholder:text-lg rounded-lg hover:ring-4 hover:placeholder:opacity-0  hover:ring-[#e6daff] 
+        hover:outline-0 transition-all duration-300 border focus:outline-0 focus:border-soft-purple focus:ring-[#d3bfff] focus:ring-4 
+        border-[#666666] w-72
+    }
+    .alert{
+        @apply px-4 py-5 leading-3 rounded-lg border
+    }
+    .alert-success {
+        @apply bg-green-200 text-green-800 border-green-500
+    }
+    .alert-failed{
+        @apply bg-pink-200 text-red-600 border-red-500
+    }
+    .border-failed{
+        @apply border-2 border-red-500
+    }
+    .active-tab{
+        @apply inline-block px-4 py-3 rounded-t-lg border-b-4 text-soft-purple border-transparent transition-all duration-300 hover:text-soft-purple hover:border-soft-purple-hover border-purple-500 dark:hover:text-gray-300
+    }
+    .inactive-tab{
+        @apply inline-block px-4 py-3 rounded-t-lg border-b-4  border-transparent hover:text-gray-600 transition-all duration-300 hover:border-gray-300 dark:hover:text-gray-300
+    }
+    .alert-animation-hide{
+        @apply relative text-left origin-top overflow-hidden duration-300 max-h-0 scale-0
+    } 
+    .alert-animation-show{
+        @apply relative text-left origin-top overflow-hidden duration-300 scale-100 max-h-full mt-2 transition-all
+    }
+    .form-checkbox-modif{
+        @apply form-checkbox w-6 h-6 border  rounded-md 
+        transition-all duration-300 focus:ring-0 text-soft-purple
+    }
+    .dialog-animation-hide{
+        @apply duration-300 scale-0
+    }
+    .dialog-animation-show{
+        @apply duration-300 scale-100 transition-all
+    }
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+}
